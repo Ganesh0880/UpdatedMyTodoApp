@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col s6">
+    <app-todo-list title="Project Todos" [todoList]="todoService.getProjectTodos()"
+    (itemAdded)="addItemToList($event, 'project')"
+    (itemChecked)="markItemAsDone($event)"
+    ></app-todo-list>
+  </div>
+
+  <div class="col s6">
+    <app-todo-list  title="Personal Todos" [todoList]="todoService.getPersonalTodos()"
+    (itemAdded)="addItemToList($event, 'personal')"
+    (itemChecked)="markItemAsDone($event)"
+    ></app-todo-list>
+  </div>
+</div>
